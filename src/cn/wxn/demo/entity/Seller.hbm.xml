@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-12-1 17:10:36 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="cn.wxn.demo.entity.Seller" table="SELLER">
+        <id name="id" type="java.lang.Long">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="NAME" />
+        </property>
+        <property name="tel" type="java.lang.String">
+            <column name="TEL" />
+        </property>
+        <property name="address" type="java.lang.String">
+            <column name="ADDRESS" />
+        </property>
+        <property name="wesite" type="java.lang.String">
+            <column name="WESITE" />
+        </property>
+        <property name="star" type="java.lang.String">
+            <column name="STAR" />
+        </property>
+        <property name="business" type="java.lang.String">
+            <column name="BUSINESS" />
+        </property>
+        
+        <set name="commodities" table="COMMODITY"  inverse="true" cascade="all">
+        	<key column="ID" />
+        	<one-to-many class="cn.wxn.demo.entity.Commodity" />
+        </set>
+    </class>
+</hibernate-mapping>

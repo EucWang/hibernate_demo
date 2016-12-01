@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-12-1 17:10:36 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="cn.wxn.demo.entity.OrderItem" table="ORDERITEM">
+        <id name="id" type="java.lang.Long">
+            <column name="ID" />
+            <generator class="native" />
+        </id> 
+        
+        <property name="discount" type="java.lang.Double">
+            <column name="DISCOUNT" />
+        </property>
+        <property name="actprice" type="java.lang.Double">
+            <column name="ACTPRICE" />
+        </property>
+        <property name="amount" type="java.lang.Double">
+            <column name="AMOUNT" />
+        </property>
+        
+        <!-- 对订单表   n..1  -->
+        <many-to-one name="orderForm"
+        			 class="cn.wxn.demo.entity.OrderForm"  
+        			 >
+        	<column name="orderform_id"></column>
+        </many-to-one>
+        
+        <!-- 对 商品表 n..n  -->
+        <set name="commodities" table="ORDERITEM_COMMODITY">
+        	<key column="oc_orderitem_id"></key>
+        	<many-to-many class="cn.wxn.demo.entity.Commodity"
+        		column="oc_commodity_id" />
+        </set>
+    </class>
+</hibernate-mapping>
