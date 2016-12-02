@@ -17,6 +17,18 @@ public class Seller implements Serializable {
 	
 	private String business; //经营范围
 	
+	public Seller(String name, String tel, String address) {
+		super();
+		this.name = name;
+		this.tel = tel;
+		this.address = address;
+	}
+
+	public Seller() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	private Set<Commodity> commodities;
 
 	public Set<Commodity> getCommodities() {

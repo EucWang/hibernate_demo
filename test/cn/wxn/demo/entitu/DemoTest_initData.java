@@ -22,7 +22,7 @@ import cn.wxn.demo.entity.OrderForm;
 import cn.wxn.demo.entity.OrderItem;
 import cn.wxn.demo.entity.Seller;
 
-public class DemoTest {
+public class DemoTest_initData {
 
 	private SessionFactory sessionFactory;
 	private Session openSession;
@@ -63,7 +63,9 @@ public class DemoTest {
 	/////////////////*****************************************////////////////
 	//////////////////////////////////////////////////////////////////////////
 	
-	
+	/**
+	 * 基本数据库数据导入
+	 */
 	@Test
 	public void initData(){
 		Seller seller1 = createSeller("A服装店", "中国北京xx区", "经营各式服装", "5", "13000000000", "www.a.com");
