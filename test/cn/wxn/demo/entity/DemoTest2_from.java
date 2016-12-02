@@ -1,4 +1,4 @@
-package cn.wxn.demo.entitu;
+package cn.wxn.demo.entity;
 
 import java.util.ArrayList;
 import java.util.Set;
