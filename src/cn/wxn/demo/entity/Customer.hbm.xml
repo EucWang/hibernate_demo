@@ -35,7 +35,7 @@
         
         <set name="orderForms" table="ORDERFORM" inverse="true" cascade="all">
             <key>
-                <column name="ID" />
+                <column name="customer_id" />
             </key>
             <one-to-many class="cn.wxn.demo.entity.OrderForm" />
         </set>

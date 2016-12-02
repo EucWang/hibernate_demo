@@ -28,7 +28,7 @@
         </property>
         
         <set name="commodities" table="COMMODITY"  inverse="true" cascade="all">
-        	<key column="ID" />
+        	<key column="seller_id" />
         	<one-to-many class="cn.wxn.demo.entity.Commodity" />
         </set>
     </class>

@@ -10,7 +10,7 @@ public class Commodity implements Serializable {
 	private Long  id;
 	private String name;
 	private Double price;
-	private String util;
+	private String unit;
 	private String category;
 	private String description;
 
@@ -42,10 +42,10 @@ public class Commodity implements Serializable {
 		this.price = price;
 	}
 	public String getUtil() {
-		return util;
+		return unit;
 	}
 	public void setUtil(String util) {
-		this.util = util;
+		this.unit = util;
 	}
 	public String getCategory() {
 		return category;
@@ -70,7 +70,7 @@ public class Commodity implements Serializable {
 	}
 	@Override
 	public String toString() {
-		return "Commodity [id=" + id + ", name=" + name + ", price=" + price + ", util=" + util + ", category="
+		return "Commodity [id=" + id + ", name=" + name + ", price=" + price + ", util=" + unit + ", category="
 				+ category + ", description=" + description + ", seller=" + seller + "]";
 	}
 	

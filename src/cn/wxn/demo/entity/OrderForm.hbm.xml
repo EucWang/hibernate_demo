@@ -19,12 +19,12 @@
             <column name="AMOUNT" />
         </property>
         
-        <many-to-one name="customer" class="cn.wxn.demo.entity.Customer" insert="false">
+        <many-to-one name="customer" class="cn.wxn.demo.entity.Customer">
         	<column name="customer_id"></column>
         </many-to-one>
         
         <set name="orderItems" table="ORDERITEM" cascade="all" inverse="true">
-        	<key column="ID"></key>
+        	<key column="orderform_id"></key>
         	<one-to-many class="cn.wxn.demo.entity.OrderItem" />
         </set>
     </class>
