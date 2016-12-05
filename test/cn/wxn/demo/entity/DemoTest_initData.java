@@ -3,6 +3,7 @@ package cn.wxn.demo.entity;
 import java.util.Date;
 import java.util.HashSet;
 
+<<<<<<< HEAD
 import javax.net.ssl.SSLEngineResult.Status;
 
 import org.hibernate.Session;
@@ -12,6 +13,14 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.query.criteria.internal.OrderImpl;
+=======
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.boot.MetadataSources;
+import org.hibernate.boot.registry.StandardServiceRegistry;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+>>>>>>> branch 'master' of https://github.com/EucWang/hibernate_demo.git
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
