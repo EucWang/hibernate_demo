@@ -41,8 +41,6 @@ public class DemoTest2_from {
 		if (openSession != null) {
 			System.out.println("openSession is not null");
 		}
-		
-		
 	}
 
 	@After
