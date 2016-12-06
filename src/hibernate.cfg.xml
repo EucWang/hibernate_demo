@@ -14,7 +14,16 @@
 
 		<property name="hibernate.show_sql">true</property>
 		<property name="hibernate.hbm2ddl.auto">update</property>
-
+		
+		<!-- hibernate 4.x 的配置 -->
+		<!-- property name="cache.provider_class">net.sf.ehcache.hibernate.EhCacheProvider</property>
+ 		-->
+ 		
+ 		<!--  hibernate 5.x的配置 -->
+ 		<property name="cache.use_second_level_cache">true</property>
+ 		<property name="cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+ 		
+ 		
 		<mapping resource="cn/wxn/demo/entity/Seller.hbm.xml" />
 		<mapping resource="cn/wxn/demo/entity/Commodity.hbm.xml" />
 		<mapping resource="cn/wxn/demo/entity/Customer.hbm.xml" />

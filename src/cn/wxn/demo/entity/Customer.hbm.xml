@@ -4,6 +4,7 @@
 <!-- Generated 2016-12-1 17:10:36 by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
     <class name="cn.wxn.demo.entity.Customer" table="CUSTOMER">
+    	<cache usage="read-only"/>
         <id name="id" type="java.lang.Long">
             <column name="ID" />
             <generator class="native" />
